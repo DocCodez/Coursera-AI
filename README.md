@@ -1,4 +1,3 @@
-# Coursera-AI
-Machine Learning/Deep Learning coursework
+# Machine Learning (Coursera)
 This repository is for all the coursework from Coursera's Stanford Machine Learning
 course.
