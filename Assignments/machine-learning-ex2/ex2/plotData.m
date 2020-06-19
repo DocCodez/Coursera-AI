@@ -13,10 +13,13 @@ figure; hold on;
 %
 
 
+% Find the got into the university scores and the did not get into the university scores.
+pos = find(y==1);
+neg = find(y==0);
 
-
-
-
+% Plot the positive against the negative based on test score 1 and 2.
+plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 2, 'MarkerSize', 7);
+plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y', 'MarkerSize', 7);
 
 
 
