@@ -20,9 +20,12 @@ grad = zeros(size(theta));
 % Note: grad should have the same dimensions as theta
 %
 
+J = (1 / m) * sum ((-y .* log(sigmoid(X * theta))) - ((1-y) .* log(1 - sigmoid(X * theta))));
 
-
-
+% Find the gradient term for each parameter theta.
+for gradTheta = 1:size(theta)
+    grad(gradTheta) = (1 / m) * sum(((sigmoid(X * theta)) - y) .* X(:,gradTheta))
+endfor
 
 
 
