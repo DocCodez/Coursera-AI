@@ -24,7 +24,7 @@ J = (1 / m) * sum ((-y .* log(sigmoid(X * theta))) - ((1-y) .* log(1 - sigmoid(X
 
 % Find the gradient term for each parameter theta.
 for gradTheta = 1:size(theta)
-    grad(gradTheta) = (1 / m) * sum(((sigmoid(X * theta)) - y) .* X(:,gradTheta))
+    grad(gradTheta) = (1 / m) * sum(((sigmoid(X * theta)) - y) .* X(:,gradTheta));
 endfor
 
 

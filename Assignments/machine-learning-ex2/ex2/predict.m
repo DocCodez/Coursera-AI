@@ -15,9 +15,14 @@ p = zeros(m, 1);
 %               You should set p to a vector of 0's and 1's
 %
 
-
-
-
+% Loop through all the training examples.
+for prediction = 1:m
+    if (sigmoid(X(prediction,:) * theta)) >= 0.5
+        p(prediction) = 1;
+    else
+        p(prediction) = 0;
+    endif
+endfor
 
 
 
