@@ -22,11 +22,21 @@ p = zeros(size(X, 1), 1);
 %
 
 
+% Add ones to the X data matrix
+X = [ones(m, 1) X];
 
+% Calculate the predictions of the NN.
+hiddenValues = sigmoid(X * Theta1');
 
+% Add the bias unit to the first hidden layer.
+hiddenValues = [ones(m, 1) hiddenValues];
 
+% Calculate the output values.
+outputValues = sigmoid(hiddenValues * Theta2');
 
-
+% Find the index of the max value of the prediciton for each row.
+[maxValue, maxIndex] = max(outputValues, [], 2);
+p = maxIndex;
 
 
 % =========================================================================
