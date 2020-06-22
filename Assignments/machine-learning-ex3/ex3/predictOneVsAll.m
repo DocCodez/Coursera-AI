@@ -30,11 +30,12 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
+% First calculate the predictions.
+prediction = X * all_theta';
 
-
-
-
-
+% Find the index of the max value of the prediciton for each row.
+[maxValue, maxIndex] = max(prediction, [], 2);
+p = maxIndex;
 
 % =========================================================================
 
